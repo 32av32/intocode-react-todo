@@ -42,7 +42,7 @@ export default function Content() {
             <div className={styles.tasks_list__container}>
                 {
                     todos.map((todo, index) => {
-                        return <Todo text={todo.text} is_favorite={todo.is_favorite} handleRemove={() => handleRemove(index)} makeFavorite={() => makeFavorite(index)} />
+                        return <Todo {...todo} handleRemove={() => handleRemove(index)} makeFavorite={() => makeFavorite(index)} />
                     })
                 }
             </div>
